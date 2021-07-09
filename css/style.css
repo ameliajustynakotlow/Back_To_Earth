@@ -1,0 +1,53 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.search-result {
+  cursor: pointer;
+}
+
+input.midnight {
+  color: #ffffff;
+  background-color: #092c42;
+  border-color: #213f52;
+}
+
+input.midnight:focus {
+  color: #ffffff;
+  background-color: #105165;
+  border-color: #166279;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(2 196 255 / 25%);
+}
+
+.modal-content {
+  background-color: #021019;
+  border: 5px solid rgb(3 151 247 / 10%);
+  color: white;
+}
+
+.modal-body > .row > div {
+  padding: 35px;
+}
+
+.bg-black {
+  background-color: black !important;
+}
+
+.border-top {
+  border-top: 1px solid #082933!important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #082933 !important;
+}
+
+.border-left{
+  border-left: 1px solid #082933 !important;
+}
+
+.border-right {
+  border-right: 1px solid #082933 !important;
+}

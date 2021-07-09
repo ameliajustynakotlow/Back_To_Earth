@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Back To Earth - Find the perfect landing site!</title>
+  </head>
+  <body>
+    <!-- BINGS MAP -->
+    <div id="myMap" class="position-fixed w-100 h-100"></div>
+    <!-- BINGS MAP -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <section class="row justify-content-center h-100">
+        <!-- SEARCH BOX -->
+        <form class="col-8 text-center d-flex pt-5" id="search-form">
+          <div class="w-100 position-relative">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg midnight" placeholder="Enter address" id="search-box" aria-describedby="search-button">
+              <button class="btn btn-dark bg-black" type="button" id="search-button">Search</button>
+            </div>
+            <ul id="search-results-box" class="list-group position-absolute w-100 d-none">
+            </ul>
+          </div>
+        </form>
+        <!-- SEARCH BOX -->
+      </section>
+
+      <!-- GENERAL INFO MODAL -->
+      <div class="modal fade" id="general-info-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header border-bottom">
+              <h5 class="modal-title">Back To Earth landing planner</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Thank you for choosing <b>Back To Earth</b> landing planner. 
+                Enter your current location and find your perfect landing site on planet Earth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GENERAL INFO MODAL -->
+
+      <!-- LANDING INFO MODAL -->
+      <div class="modal fade" id="landing-info-modal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <h5 class="modal-title">Landing site information for location: <span class="landing-site-location"></span></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-0">
+              <div class="row border-top border-bottom mx-0">
+                <div class="col-md-6 text-center border-right">
+                  <h5>Route to space station:</h5>
+                  <div class="w-100 route text-center">
+                  </div>
+                </div>
+                <div class="col-md-6 text-center">
+                  <h5>Streetside image of landing site:</h5>
+                  <div class="w-100 streetside text-center">
+                  </div>
+                </div>
+                <div class="col-md-12 text-center border-top">
+                  <h5>Top view of landing site:</h5>
+                  <div class="birdseye w-100 text-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LANDING INFO MODAL -->
+
+    </main>
+    <!-- MAIN CONTENT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="js/script.js" type="text/javascript" defer></script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+  </body>
+</html>
